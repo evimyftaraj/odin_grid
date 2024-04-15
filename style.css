@@ -1,0 +1,118 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family: Helvetica, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: flex;
+    
+}
+
+h1 {
+    text-align: center;
+    justify-content: center;
+    font-size: 55px;
+    padding: 20px;
+    margin-top: 5px;
+    margin-left: 150px;
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 250px;
+    padding: 20px;
+    margin-left: 40px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+
+button.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+input[type="color"] {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    appearance: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    border: 1px solid var(--primary-dark);
+    border-radius: 25px;
+    background: var(--secondary-light);
+    height: 12px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    width: 16px;  /* Set the width of the thumb */
+    height: 16px; /* Set the height of the thumb */
+    background-color: #333; /* Optional: Set the color of the thumb */ /* Optional: Change the cursor to a pointer */
+}
+
+button, input[type='color'] {
+    transition: transform 0.1s ease-in-out
+}
+
+button:hover, input[type='color']:hover {
+    transform: scale(1.05);
+}
+
+input[type='color']:active {
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1);
+  }
+
+#colorPicker::-webkit-color-swatch, #bgPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.gridbox {
+    background-color: var(--primary-light);
+    display: grid;
+    width: 500px;
+    height: 500px;  
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 150px;
+}
+
+.grid-element {
+    user-select: none;
+}
+
+.leftside1, .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
